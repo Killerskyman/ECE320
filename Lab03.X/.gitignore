@@ -1,0 +1,6 @@
+*.o
+*.a
+/build/*
+/debug/*
+/dist/*
+
