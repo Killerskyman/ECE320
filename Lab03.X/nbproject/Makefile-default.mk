@@ -28,12 +28,12 @@ CP=cp
 CND_CONF=default
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 IMAGE_TYPE=debug
-OUTPUT_SUFFIX=elf
+OUTPUT_SUFFIX=
 DEBUGGABLE_SUFFIX=elf
 FINAL_IMAGE=dist/${CND_CONF}/${IMAGE_TYPE}/Lab03.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 else
 IMAGE_TYPE=production
-OUTPUT_SUFFIX=hex
+OUTPUT_SUFFIX=
 DEBUGGABLE_SUFFIX=elf
 FINAL_IMAGE=dist/${CND_CONF}/${IMAGE_TYPE}/Lab03.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 endif
@@ -95,14 +95,14 @@ MP_LINKER_FILE_OPTION=,--script=p30F4011.gld
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/check_IIR_filter.o: check_IIR_filter.c  .generated_files/flags/default/12d36d544908c2c8b9da979cc0057928bb95deac .generated_files/flags/default/de7fcd375e44fa2aaa09dddddc62490dc8c9ac7e
+${OBJECTDIR}/check_IIR_filter.o: check_IIR_filter.c  .generated_files/flags/default/48550021db6264cfc2c8cd17f6af87b3249659a5 .generated_files/flags/default/de7fcd375e44fa2aaa09dddddc62490dc8c9ac7e
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/check_IIR_filter.o.d 
 	@${RM} ${OBJECTDIR}/check_IIR_filter.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  check_IIR_filter.c  -o ${OBJECTDIR}/check_IIR_filter.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/check_IIR_filter.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 else
-${OBJECTDIR}/check_IIR_filter.o: check_IIR_filter.c  .generated_files/flags/default/8a1ea48cf8312b3762ca7789108274a1bfad88cd .generated_files/flags/default/de7fcd375e44fa2aaa09dddddc62490dc8c9ac7e
+${OBJECTDIR}/check_IIR_filter.o: check_IIR_filter.c  .generated_files/flags/default/ee33cf08df9b1593cc89515c9a24d4f915d0124f .generated_files/flags/default/de7fcd375e44fa2aaa09dddddc62490dc8c9ac7e
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/check_IIR_filter.o.d 
 	@${RM} ${OBJECTDIR}/check_IIR_filter.o 

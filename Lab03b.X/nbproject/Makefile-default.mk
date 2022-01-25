@@ -28,12 +28,12 @@ CP=cp
 CND_CONF=default
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 IMAGE_TYPE=debug
-OUTPUT_SUFFIX=elf
+OUTPUT_SUFFIX=
 DEBUGGABLE_SUFFIX=elf
 FINAL_IMAGE=dist/${CND_CONF}/${IMAGE_TYPE}/Lab03b.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 else
 IMAGE_TYPE=production
-OUTPUT_SUFFIX=hex
+OUTPUT_SUFFIX=
 DEBUGGABLE_SUFFIX=elf
 FINAL_IMAGE=dist/${CND_CONF}/${IMAGE_TYPE}/Lab03b.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 endif
@@ -95,14 +95,14 @@ MP_LINKER_FILE_OPTION=,--script=p30F4011.gld
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/wheel_modelling_and_control.o: wheel_modelling_and_control.c  .generated_files/flags/default/873e4c0e21f71a4b6242c81b8323c360c2631c3e .generated_files/flags/default/de7fcd375e44fa2aaa09dddddc62490dc8c9ac7e
+${OBJECTDIR}/wheel_modelling_and_control.o: wheel_modelling_and_control.c  .generated_files/flags/default/e3cf6ba839ba879ecba146f2260950fadf823d1e .generated_files/flags/default/de7fcd375e44fa2aaa09dddddc62490dc8c9ac7e
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/wheel_modelling_and_control.o.d 
 	@${RM} ${OBJECTDIR}/wheel_modelling_and_control.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  wheel_modelling_and_control.c  -o ${OBJECTDIR}/wheel_modelling_and_control.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/wheel_modelling_and_control.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 else
-${OBJECTDIR}/wheel_modelling_and_control.o: wheel_modelling_and_control.c  .generated_files/flags/default/c53ab572b2cc56bfc4525557c2d1d5052d902000 .generated_files/flags/default/de7fcd375e44fa2aaa09dddddc62490dc8c9ac7e
+${OBJECTDIR}/wheel_modelling_and_control.o: wheel_modelling_and_control.c  .generated_files/flags/default/d601591d3089cf8e996823ec6dbbdfa9dfb49c54 .generated_files/flags/default/de7fcd375e44fa2aaa09dddddc62490dc8c9ac7e
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/wheel_modelling_and_control.o.d 
 	@${RM} ${OBJECTDIR}/wheel_modelling_and_control.o 
